@@ -26,9 +26,9 @@ PGM_P const DHT22_STATUS_MESSAGES[] PROGMEM = { DHT22_STATUS_OK,        // idx =
                                                 DHT22_UNKNOWN_ERROR,    // idx = 6
                                               };
 
-byte void dht22_measurement(byte pin)
+byte dht22_reading(byte pin)
 {
-  return (DHT.read22(pin));
+  return (dht.read22(pin));
 }
 
 

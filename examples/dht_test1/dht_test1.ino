@@ -8,7 +8,7 @@
 // Released to the public domain
 //
 
-#include <CHT.h>
+#include <DHT.h>
 
 DHT dht;
 
