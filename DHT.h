@@ -12,6 +12,7 @@
 #ifndef DHT_H
 #define DHT_H
 
+
 #if ARDUINO < 100
 #include <WProgram.h>
 #include <pins_arduino.h>  // fix for broken pre 1.0 version - TODO TEST
@@ -19,7 +20,9 @@
 #include <Arduino.h>
 #endif
 
+
 #define DHT_LIB_VERSION "0.1.21"
+
 
 #define DHTLIB_OK                   0
 #define DHTLIB_ERROR_CHECKSUM       -1
@@ -34,6 +37,7 @@
 #define DHTLIB_DHT11_LEADING_ZEROS  1
 #define DHTLIB_DHT_LEADING_ZEROS    6
 
+
 // max timeout is 100 usec.
 // For a 16 Mhz proc 100 usec is 1600 clock cycles
 // loops using DHTLIB_TIMEOUT use at least 4 clock cycli
@@ -45,8 +49,8 @@
 #define DHTLIB_TIMEOUT (F_CPU/40000)
 #endif
 
-class dht
-{
+
+class DHT {
 public:
     DHT() {};
     // return values:
@@ -71,7 +75,10 @@ private:
     uint8_t bits[5];  // buffer to receive data
     int8_t _readSensor(uint8_t pin, uint8_t wakeupDelay, uint8_t leadingZeroBits);
 };
-#endif
+
+
+#endif  /* DHT_H */
+
 //
 // END OF FILE
 //
