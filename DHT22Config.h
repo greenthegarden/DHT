@@ -10,12 +10,12 @@ DHT dht;
 
 // DHT22 status messages
 const char DHT22_STATUS_OK[]        PROGMEM = "OK";
-const char DHT22_CHECKSUM_ERROR[]   PROGMEM = "Checksum error";
-const char DHT22_TIMEOUT_ERROR[]    PROGMEM = "Time out error";
-const char DHT22_CONNECT_ERROR[]    PROGMEM = "Connect error";
-const char DHT22_ACK_LOW_ERROR[]    PROGMEM = "Ack Low error";
-const char DHT22_ACK_HIGH_ERROR[]   PROGMEM = "Ack High error";
-const char DHT22_UNKNOWN_ERROR[]    PROGMEM = "Unknown error";
+const char DHT22_CHECKSUM_ERROR[]   PROGMEM = "ERROR: Checksum";
+const char DHT22_TIMEOUT_ERROR[]    PROGMEM = "ERROR: Time out";
+const char DHT22_CONNECT_ERROR[]    PROGMEM = "ERROR: Connect";
+const char DHT22_ACK_LOW_ERROR[]    PROGMEM = "ERROR: Ack Low";
+const char DHT22_ACK_HIGH_ERROR[]   PROGMEM = "ERROR: Ack High";
+const char DHT22_UNKNOWN_ERROR[]    PROGMEM = "ERROR: Unknown";
 
 PGM_P const DHT22_STATUS_MESSAGES[] PROGMEM = { DHT22_STATUS_OK,        // idx = 0
                                                 DHT22_CHECKSUM_ERROR,   // idx = 1
