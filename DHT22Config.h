@@ -1,12 +1,11 @@
 #ifndef DHT22CONFIG_H_
 #define DHT22CONFIG_H_
 
+
 // DHT22 temperature/humidty sensor library
 #include <DHT.h>
 
-
 DHT dht;
-
 
 // DHT22 status messages
 const char DHT22_STATUS_OK[]        PROGMEM = "OK";
@@ -25,6 +24,16 @@ PGM_P const DHT22_STATUS_MESSAGES[] PROGMEM = { DHT22_STATUS_OK,        // idx =
                                                 DHT22_ACK_HIGH_ERROR,   // idx = 5
                                                 DHT22_UNKNOWN_ERROR,    // idx = 6
                                               };
+
+typedef enum {
+DHT22_STATUS_OK_IDX = 0,
+DHT22_CHECKSUM_ERROR_IDX = 1,
+DHT22_TIMEOUT_ERROR_IDX = 2,
+DHT22_CONNECT_ERROR_IDX = 3,
+DHT22_ACK_LOW_ERROR_IDX = 4,
+DHT22_ACK_HIGH_ERROR_IDX = 5,
+DHT22_UNKNOWN_ERROR_IDX = 6,
+} dht22_status_messages;
 
 byte dht22_reading(byte pin)
 {
