@@ -2,10 +2,9 @@
 #define DHT22CONFIG_H_
 
 
-// DHT22 temperature/humidty sensor library
-#include <DHT.h>
+// DHT22 temperature/humidity sensor library
+#include "dht.h"
 
-DHT dht;
 
 // DHT22 status messages
 const char DHT22_STATUS_OK[]        PROGMEM = "OK";
@@ -34,11 +33,5 @@ DHT22_ACK_LOW_ERROR_IDX = 4,
 DHT22_ACK_HIGH_ERROR_IDX = 5,
 DHT22_UNKNOWN_ERROR_IDX = 6,
 } dht22_status_messages;
-
-byte dht22_reading(byte pin)
-{
-  return (dht.read22(pin));
-}
-
 
 #endif  /* DHT22CONFIG_H_ */
