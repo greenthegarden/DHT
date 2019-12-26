@@ -5,7 +5,6 @@
 // DHT22 temperature/humidity sensor library
 #include "dht.h"
 
-
 // DHT22 status messages
 const char DHT22_STATUS_OK[]        PROGMEM = "OK";
 const char DHT22_CHECKSUM_ERROR[]   PROGMEM = "ERROR: Checksum";
